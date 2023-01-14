@@ -9,7 +9,7 @@
         <header class="header">
             <div class="header-left"">
                 <a href="./index.html">
-                    <img src="/assets/logo-crop_adobe_express.svg" alt="life-header-logo" height="80px">
+                    <img class="header-logo" src="/assets/logo-crop_adobe_express.svg" alt="life-header-logo">
                     <!-- Logo created using https://www.freelogodesign.org/ -->
                 </a>
             </div>
@@ -32,11 +32,34 @@
                     <li><a href=""><h3>Healthy Habits</h3></a></li>
                 </ul>
             </nav>
-            <div class="content-panel">
-                content
+            <div class="contact-panel">
+                <div class="contact-info-panel">
+                    <h2>Get in touch with us!</h2>
+                    <p >Call us at <u>03 9234 5678</u> 9am to 4pm weekdays<br>or send us a message below.</p>
+                </div>
+                <div class="form-container">
+                    <form method="GET" action="./submitted" class="contact-form">
+                        <label for="name">
+                            <input type="text" name="name" id="name" placeholder="Full name" required>
+                        </label>
+                        <label for="contact-details">
+                            <input type="text" name="contact-details" id="contact-details" placeholder="Email/Phone Number">
+                        </label>
+                        <label for="message">
+                            <textarea name="message" id="message" placeholder="What's the message?!"></textarea>
+                        </label>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="address-panel">
+                    <img src="./assets/logo-crop_adobe_express.svg" alt="LIFE Logo">
+                    <p>
+                        Level 2 235 Random Road,<br>Melbourn, VIC 3000 <br>Australia
+                    </p>
+                    <p>03 9234 5678</p>
+                    <p><a href="mailto:contact@life.com.au">contact@life.com.au</a></p>
+                </div>
             </div>
-
-
         </main>
         <footer>
             <div class="footer-left">

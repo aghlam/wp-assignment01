@@ -35,6 +35,10 @@ ul {
     padding: 0;
 }
 
+button:active {
+    transform: translateY(4px);
+}
+
 /* Header and Footer Section*/
 
 header,
@@ -103,6 +107,7 @@ header a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
 }
@@ -163,19 +168,17 @@ header a {
 .home-login-panel button {
     font-size: 2rem;
     padding: 0.5rem 1rem;
-    background-color: #0c120c;
+    background-color: #62466b;
     color: white;
     border-radius: 1rem;
 }
 
 .home-login-panel button:hover {
     background-color: white;
-    color: #0c120c;
+    color: #62466b;
 }
 
-.home-login-panel button:active {
-    transform: translateY(4px);
-}
+
 
 #span-separator {
     margin: 0 25px;
@@ -259,7 +262,7 @@ header a {
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: #5D5E60;
+    background-color: #62466b;
     width: 249px;
     justify-content: center;
     align-items: center;
@@ -292,6 +295,7 @@ header a {
     left: -250px;
 }
 
+/* General layout for other pages */
 
 .main-general {
     display: grid;
@@ -300,17 +304,23 @@ header a {
     background: linear-gradient(white, #E1F3F0);
 }
 
+@media (max-width: 700px) {
+    .main-general {
+        display: flex;
+        flex-direction: column;
+        /* grid-template-columns: 1fr; */
+
+    }
+}
+
 /* Nav Side bar */
 
 nav {
     border-right: solid 1px black;
     display: flex;
     flex-direction: column;
-    /* background-color: aliceblue; */
     padding: 1rem;
-    /* padding: 1rem; */
     font-size: small;
-    /* padding-right: 1rem; */
 }
 
 @media (max-width: 700px) {
@@ -325,30 +335,99 @@ nav a {
     width: 100%;
     padding-left: 1rem;
     border-radius: 1rem;
-    /* margin: 1rem; */
-    /* text-decoration: none; */
-    /* color: inherit; */
+    color: #62466b;
 }
 
 nav a:hover {
-    /* text-decoration: underline; */
     background-color: #62466b;
     color: white;
 }
 
-nav h3 {
-    /* margin: 0; */
-}
-
-nav li {
-    /* padding-left: 1rem; */
-}
-
 #nav-home-link {
-    /* font-size: 1.2rem; */
+    font-size: 1.1rem;
 }
 
 nav hr {
     border: none;
     border-top: solid 1px black;
 }
+
+/* ----------------------------------------------- */
+
+/* Contact Page */
+
+.contact-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact-info-panel {
+    text-align: center;
+    font-size: medium;
+    
+    margin: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact-form button {
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    border-radius: 1rem;
+    font-size: large;
+    color: #62466b;
+    margin: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #62466b;
+    color: white;
+}
+
+.contact-form input, .contact-form textarea {
+    font-family: inherit;
+    font-size: large;
+    line-height: 1.2;
+    margin: 1rem;
+    padding:20px;
+    min-width: 270px;
+    width: 35vw;
+    max-width: 500px;
+    background-color: #d5ede8;
+    border-radius: 8px;
+    border: solid 1px #62466b;
+    
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    height: 150px;
+}
+
+.address-panel {
+    padding-top: 150px;
+    width: 40vw;
+    text-align: center;
+    margin: 1.5rem;
+    font-size: large;
+}
+
+.address-panel img {
+    height: 60px;
+}
+
+.address-panel a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ----------------------------------------------- */

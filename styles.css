@@ -489,3 +489,19 @@ nav hr {
     height: 81vh;
     font-size: large;
 }
+
+
+/* --------------------------------------------- */
+/* Join page */
+
+.join-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.join-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}

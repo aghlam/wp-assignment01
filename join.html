@@ -33,9 +33,40 @@
                 </ul>
             </nav>
             <div class="join-panel">
-                <form method="POST" action="./submitted.html">
-                    <label for="firstName"><input type="text"></label>
-                    <button type="submit">Submit</button>
+                <h2>Join us to access the full range of services!</h2>
+                <form method="POST" action="./submitted.html" class="join-form" id="join-form">
+                    <label for="firstName">First name<input type="text" name="firstName" id="firstName"></label>
+                    <label for="lastName">Last name<input type="text" name="lastName" id="lastName"></label>
+                    <label for="email">Email<input type="email" name="email" id="email"></label>
+                    <label for="emailConfirm">Confirm email<input type="email" name="emailConfirm" id="emailConfirm"></label>
+                    <label for="phone">Phone<input type="tel" name="phone" id="phone"></label>
+                    <label for="birthday">Birth Year
+                        <select name="birthday" id="birthday">
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </label>
+                    <div>
+                        <label for="studentStatus">Student status
+                            <input type="radio" id="studying" name="studentStatus" value="studying" checked>
+                            <label for="studying">Studying</label>
+                            <input type="radio" id="notStudying" name="studentStatus" value="not studying">
+                            <label for="notStudying">Studying</label>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="employmentStatus">Employment Status
+                            <input type="radio" id="employed" name="employmentStatus" value="employed" checked>
+                            <label for="employed">Employed</label>
+                            <input type="radio" id="seeking" name="employmentStatus" value="seeking">
+                            <label for="seeking">Seeking Employment</label>
+                            <input type="radio" id="other" name="employmentStatus" value="other">
+                            <label for="other">Other</label>
+                        </label>
+                        <label for="password">Password<input type="password"></label>
+                    </div>
+                    <button type="submit">Join!</button>
                 </form>
             </div>
         </main>

@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-
+/* --------------------------------------------- */
 /* General */
 
 *, :after, :before {
@@ -38,6 +38,9 @@ ul {
 button:active {
     transform: translateY(4px);
 }
+
+/* --------------------------------------------- */
+/* General layout */
 
 /* Header and Footer Section*/
 
@@ -112,6 +115,65 @@ header a {
 
 }
 
+.main-general {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding: 0 15vw;
+    background: linear-gradient(white, #E1F3F0);
+}
+
+@media (max-width: 700px) {
+    .main-general {
+        display: flex;
+        flex-direction: column;
+        /* grid-template-columns: 1fr; */
+
+    }
+}
+
+/* Nav Side bar */
+
+nav {
+    border-right: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: small;
+}
+
+@media (max-width: 700px) {
+    nav {
+        display: none;
+    }
+    
+}
+
+nav a {
+    display: inline-block;
+    width: 100%;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    color: #62466b;
+}
+
+nav a:hover {
+    background-color: #62466b;
+    color: white;
+}
+
+#nav-home-link {
+    font-size: 1.1rem;
+}
+
+nav hr {
+    border: none;
+    border-top: solid 1px black;
+}
+
+
+/* --------------------------------------------- */
+/* Home Page */
+
 /* Main Section */
 
 .homepage {
@@ -177,8 +239,6 @@ header a {
     background-color: white;
     color: #62466b;
 }
-
-
 
 #span-separator {
     margin: 0 25px;
@@ -295,65 +355,8 @@ header a {
     left: -250px;
 }
 
-/* General layout for other pages */
 
-.main-general {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    padding: 0 15vw;
-    background: linear-gradient(white, #E1F3F0);
-}
-
-@media (max-width: 700px) {
-    .main-general {
-        display: flex;
-        flex-direction: column;
-        /* grid-template-columns: 1fr; */
-
-    }
-}
-
-/* Nav Side bar */
-
-nav {
-    border-right: solid 1px black;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    font-size: small;
-}
-
-@media (max-width: 700px) {
-    nav {
-        display: none;
-    }
-    
-}
-
-nav a {
-    display: inline-block;
-    width: 100%;
-    padding-left: 1rem;
-    border-radius: 1rem;
-    color: #62466b;
-}
-
-nav a:hover {
-    background-color: #62466b;
-    color: white;
-}
-
-#nav-home-link {
-    font-size: 1.1rem;
-}
-
-nav hr {
-    border: none;
-    border-top: solid 1px black;
-}
-
-/* ----------------------------------------------- */
-
+/* --------------------------------------------- */
 /* Contact Page */
 
 .contact-panel {
@@ -365,9 +368,12 @@ nav hr {
 
 .contact-info-panel {
     text-align: center;
-    font-size: medium;
-    
+    font-size: large;
     margin: 1rem;
+}
+
+.contact-info-panel a {
+    color: inherit;
 }
 
 .contact-form {
@@ -397,7 +403,7 @@ nav hr {
     font-family: inherit;
     font-size: large;
     line-height: 1.2;
-    margin: 1rem;
+    margin: 1.5rem;
     padding:20px;
     min-width: 270px;
     width: 35vw;
@@ -430,4 +436,13 @@ nav hr {
     color: inherit;
 }
 
-/* ----------------------------------------------- */
+#contact-error-notification {
+    color: red;
+    font-size: smaller;
+    text-align: center;
+    margin: 0;
+    display: none;
+}
+
+
+/* --------------------------------------------- */

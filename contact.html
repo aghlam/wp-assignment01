@@ -17,7 +17,6 @@
                 <ul>
                     <li><a href="#">Login</a></li>
                     <li><a href="#">Join</a></li>
-                    <!-- <li>Contact Us</li> -->
                 </ul>
             </div>
         </header>
@@ -27,26 +26,27 @@
                     <li id="nav-home-link"><a href="./index.html"><h3>Home</h3></a></li>
                     <hr>
                     <li><a href="./yoga.html"><h3>Yoga</h3></a></li>
-                    <li><a href=""><h3>Meditation</h3></a></li>
-                    <li><a href=""><h3>Stretching</h3></a></li>
-                    <li><a href=""><h3>Healthy Habits</h3></a></li>
+                    <li><a href="./meditation"><h3>Meditation</h3></a></li>
+                    <li><a href="./stretching"><h3>Stretching</h3></a></li>
+                    <li><a href="./healthy-habits"><h3>Healthy Habits</h3></a></li>
                 </ul>
             </nav>
             <div class="contact-panel">
                 <div class="contact-info-panel">
                     <h2>Get in touch with us!</h2>
-                    <p >Call us at <u>03 9234 5678</u> 9am to 4pm weekdays<br>or send us a message below.</p>
+                    <p>Call us at <a href="tel:+6192345678"><u>03 9234 5678</u></a> 9am to 4pm weekdays<br>or send us a message below.</p>
                 </div>
                 <div class="form-container">
-                    <form method="GET" action="./submitted" class="contact-form">
+                    <form method="GET" action="./submitted" class="contact-form" id="contact-form">
                         <label for="name">
                             <input type="text" name="name" id="name" placeholder="Full name" required>
                         </label>
                         <label for="contact-details">
-                            <input type="text" name="contact-details" id="contact-details" placeholder="Email/Phone Number">
+                            <input type="text" name="contactDetails" id="contactDetails" placeholder="Email/Phone Number" required>
+                            <p id="contact-error-notification">Valid email or phone number required</p>
                         </label>
                         <label for="message">
-                            <textarea name="message" id="message" placeholder="What's the message?!"></textarea>
+                            <textarea name="message" id="message" placeholder="What's the message?!" required></textarea>
                         </label>
                         <button type="submit">Submit</button>
                     </form>
@@ -56,7 +56,7 @@
                     <p>
                         Level 2 235 Random Road,<br>Melbourn, VIC 3000 <br>Australia
                     </p>
-                    <p>03 9234 5678</p>
+                    <p><a href="tel:+6192345678">03 9234 5678</a></p>
                     <p><a href="mailto:contact@life.com.au">contact@life.com.au</a></p>
                 </div>
             </div>
@@ -68,10 +68,12 @@
             </div>
             <div class="footer-right">
                 <ul>
+                    <li><a href="./index.html">Home</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">About Us</a></li>
                 </ul>
             </div>
         </footer>
+        <script type="module" src="./contact-utilities.js"></script>
     </body>
 </html>

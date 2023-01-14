@@ -3,25 +3,91 @@
     <head>
         <title>LIFE - Living It Fully Everyday</title>
         <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
         <header class="header">
             <div class="header-left"">
-                <a href="#"><img src="/assets/logo-crop_adobe_express.svg" alt="life-logo" height="80px"></a>
+                <a href="./index.html">
+                    <img src="/assets/logo-crop_adobe_express.svg" alt="life-header-logo" height="80px">
+                    <!-- Logo created using https://www.freelogodesign.org/ -->
+                </a>
             </div>
-            <div class="header-right"">Links</div>
+            <div class="header-right"">
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Join</a></li>
+                    <!-- <li>Contact Us</li> -->
+                </ul>
+            </div>
         </header>
-        <main class="main-container">
-            <div class="top-intro">
-                Slogan
+        <main class="homepage">
+            <div class="home-intro">
+                <div class="home-intro-text">
+                    <h1>Living It Fully Everyday
+                    </h1>
+                    <h2>Helping the community live a healthier lifestyle</h2>
+                </div>
             </div>
-            <div class="content">
-                Cards
+            <div class="home-info-panel">
+                <div class="home-login-panel">
+                    <p>
+                        <button onclick="document.location='./contact.html'">Login</button>
+                        <span id="span-separator">or</span>
+                        <a href="">Create account</a>
+                    </p>
+                </div>
+                <div class="right-info-panel">
+                    <p>
+                        The local council proudly presents a new digital wellness hub, dedicated to 
+                        helping the community create a healthier, more mindful and productive lifestyle!
+                    </p>
+                    <p>
+                        Select from one of the below categories to find out more! 
+                    </p>
+                </div>
             </div>
-            
+            <div class="home-cards-panel">
+                <div class="card-container">
+                    <a href="./yoga.html">
+                        <h3 class="card-text">Yoga</h3>
+                        <img id="yoga-image" class="card-image" src="./assets/yoga-gb5ec366ac_1920.jpg" alt="LIFE Yoga Service">
+                        <!-- IMage sourced from https://pixabay.com/photos/yoga-asana-pose-hatha-woman-girl-2959226/ -->
+                    </a>
+                </div>
+                <div class="card-container">
+                    <a href="#">
+                        <h3 class="card-text">Meditation</h3>
+                        <img id="meditation-image" class="card-image" src="./assets/woman-g201114f82_1920-meditation.jpg" alt="LIFE Meditation Service">
+                        <!-- Image sourced from https://pixabay.com/photos/woman-yoga-meditation-mindfulness-3053492/ -->
+                    </a>    
+                </div>
+                <div class="card-container">
+                    <a href="#">
+                        <h3 class="card-text">Stretching</h3>
+                        <img id="stretching-image" class="card-image" src="./assets/woman-g3b35836cc_1920-stretching.jpg" alt="LIFE Stretching Service">
+                        <!-- Image sourced from https://pixabay.com/photos/woman-yoga-stretching-meditation-2573216/ -->
+                    </a>
+                </div>
+                <div class="card-container">
+                    <a href="#">
+                        <h3 class="card-text">Healthy Habits</h3>
+                        <img id="healthy-habits-image" class="card-image" src="./assets/woman-g4303c1d63_1920-healthy.jpg" alt="LIFE Healthy Habits Service">
+                        <!-- Image sourced from https://pixabay.com/photos/woman-jogging-running-exercise-2592247/ -->
+                    </a>
+                </div>
+            </div>
         </main>
         <footer>
-            Footer
+            <div class="footer-left">
+                <h6>Copyright © 2023 | Alan Lam - RMIT | All rights reserved</h6>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
         </footer>
     </body>
 </html>

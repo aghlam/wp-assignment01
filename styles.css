@@ -1,27 +1,310 @@
+/* Imports */
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-* {
+
+/* General */
+
+*, :after, :before {
     box-sizing: border-box;
 }
 
 html {
-    padding: 0;
-    margin: 0;
     font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 }
 
-header {
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and Footer Section*/
+
+header,
+footer {
     display: flex;
     justify-content: space-between;
     background-color: #E1F3F0;
-    padding: 3rem 3rem;
+    padding: 1rem 15vw;
+}
+
+.footer-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem ;
+    margin-left: 0;
+}
+
+footer h6 {
+    all: unset;
+}
+
+
+.header-right,
+.footer-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+@media (max-width: 800px) {
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
 }
 
-.header-left {
-    /* background-color: green; */
+.header-right ul, 
+.footer-right ul {
+    display: flex;
+    gap: 2rem;
+
 }
 
-.header-right {
-    background-color: yellow;
+header a:hover, .home-login-panel a:hover {
+    text-decoration: underline;
+}
+
+header a {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+
+/* Main Section */
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-intro {
+    background-color: #E1F3F0;
+    align-self: stretch;
+    padding: 0 15vw;
+}
+
+.home-intro-text > h1{
+    font-size: 4rem;
+    color: #62466b;
+}
+
+.home-intro-text > h2{
+    font-size: 2.5rem;
+    color: #62466b;
+}
+
+.home-info-panel {
+    margin: 0 15vw;
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 3rem 0rem;
+    justify-content: space-between;
+}
+
+@media (max-width:1024px) {
+    .home-info-panel {
+        display: flex;
+    }
+
+}
+
+.home-login-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-large;
+    /* margin-right: 5vw; */
+}
+
+@media (max-width:1024px) {
+    .home-login-panel {
+        display: none;
+    }
+}
+
+.home-login-panel button {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #0c120c;
+    color: white;
+    border-radius: 1rem;
+}
+
+.home-login-panel button:hover {
+    background-color: white;
+    color: #0c120c;
+}
+
+.home-login-panel button:active {
+    transform: translateY(4px);
+}
+
+#span-separator {
+    margin: 0 25px;
+}
+
+.right-info-panel {
+    border: 1px solid black;
+    padding: 2rem;
+    /* justify-self: end; */
+    font-size: 1.5rem;
+    margin-left: 5vw;
+}
+
+@media (max-width: 1024px) {
+    .right-info-panel {
+        margin: 0;
+    }
+}
+
+.home-cards-panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-self: stretch;
+    padding: 0 15vw;
+    background: linear-gradient(white, #E1F3F0);
+    
+}
+
+@media (max-width: 1440px) {
+    .home-cards-panel {
+        padding: 0 10vw;
+
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .home-cards-panel {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 15vw;
+    }
+}
+
+
+.card-container {
+    border: 1px solid black;
+    height: 400px;
+    width: 250px;
+    min-width: 200px;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.card-text {
+    z-index: 1;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #5D5E60;
+    width: 249px;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    opacity: 65%;
+    font-size: x-large;
+    color: white;
+    
+}
+
+.card-image {
+    height: 400px;
+    position: relative;
+
+}
+
+#yoga-image {
+    left: -230px;
+}
+
+#meditation-image {
+    left: -288px;
+}
+
+#stretching-image {
+    left: -200px;
+}
+
+#healthy-habits-image {
+    left: -250px;
+}
+
+
+.main-general {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding: 0 15vw;
+    background: linear-gradient(white, #E1F3F0);
+}
+
+/* Nav Side bar */
+
+nav {
+    border-right: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    /* background-color: aliceblue; */
+    padding: 1rem;
+    /* padding: 1rem; */
+    font-size: small;
+    /* padding-right: 1rem; */
+}
+
+nav a {
+    display: inline-block;
+    width: 100%;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    /* margin: 1rem; */
+    /* text-decoration: none; */
+    /* color: inherit; */
+}
+
+nav a:hover {
+    /* text-decoration: underline; */
+    background-color: #62466b;
+    color: white;
+}
+
+nav h3 {
+    /* margin: 0; */
+}
+
+nav li {
+    /* padding-left: 1rem; */
+}
+
+#nav-home-link {
+    /* font-size: 1.2rem; */
+}
+
+nav hr {
+    border: none;
+    border-top: solid 1px black;
 }

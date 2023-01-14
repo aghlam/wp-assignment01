@@ -27,19 +27,19 @@
                     <li id="nav-home-link"><a href="./index.html"><h3>Home</h3></a></li>
                     <hr>
                     <li><a href="./yoga.html"><h3>Yoga</h3></a></li>
-                    <li><a href="./meditation"><h3>Meditation</h3></a></li>
-                    <li><a href="./stretching"><h3>Stretching</h3></a></li>
-                    <li><a href="./healthy-habits"><h3>Healthy Habits</h3></a></li>
+                    <li><a href="./meditation.html"><h3>Meditation</h3></a></li>
+                    <li><a href="./stretching.html"><h3>Stretching</h3></a></li>
+                    <li><a href="./healthy-habits.html"><h3>Healthy Habits</h3></a></li>
                 </ul>
             </nav>
             <div class="join-panel">
                 <h2>Join us to access the full range of services!</h2>
                 <form method="POST" action="./submitted.html" class="join-form" id="join-form">
-                    <label for="firstName">First name<input type="text" name="firstName" id="firstName"></label>
-                    <label for="lastName">Last name<input type="text" name="lastName" id="lastName"></label>
-                    <label for="email">Email<input type="email" name="email" id="email"></label>
-                    <label for="emailConfirm">Confirm email<input type="email" name="emailConfirm" id="emailConfirm"></label>
-                    <label for="phone">Phone<input type="tel" name="phone" id="phone"></label>
+                    <label for="firstName">First name<input type="text" name="firstName" id="firstName" required></label>
+                    <label for="lastName">Last name<input type="text" name="lastName" id="lastName" required></label>
+                    <label for="email">Email<input type="email" name="email" id="email" required></label>
+                    <label for="emailConfirm">Confirm email<input type="email" name="emailConfirm" id="emailConfirm" required></label>
+                    <label for="phone">Phone<input type="tel" name="phone" id="phone" required></label>
                     <label for="birthday">Birth Year
                         <select name="birthday" id="birthday">
                             <option value="2023">2023</option>
@@ -64,7 +64,7 @@
                             <input type="radio" id="other" name="employmentStatus" value="other">
                             <label for="other">Other</label>
                         </label>
-                        <label for="password">Password<input type="password"></label>
+                        <label for="password">Password<input type="password" required></label>
                     </div>
                     <button type="submit">Join!</button>
                 </form>
@@ -83,6 +83,6 @@
                 </ul>
             </div>
         </footer>
-        <script type="module" src="./"></script>
+        <script type="module" src="./join-utilities.js"></script>
     </body>
 </html>

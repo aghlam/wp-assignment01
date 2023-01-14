@@ -185,10 +185,8 @@ nav hr {
     }
 
     nav ul {
-        /* display: none; */
         display: flex;
-
-        flex-direction: row;
+        flex-flow: row wrap;
         justify-content: space-between;
         padding: 0;
         margin: 0;

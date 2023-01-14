@@ -20,6 +20,7 @@ body {
     padding: 0;
 }
 
+
 a {
     text-decoration: none;
 }
@@ -52,6 +53,11 @@ footer {
     margin-left: 0;
 }
 
+.header-logo {
+    height: 80px;
+}
+
+
 footer h6 {
     all: unset;
 }
@@ -65,21 +71,12 @@ footer h6 {
     margin: 1rem;
 }
 
-@media (max-width: 800px) {
-
-    footer {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-}
 
 .header-right ul, 
 .footer-right ul {
     display: flex;
     gap: 2rem;
-
+    
 }
 
 header a:hover, .home-login-panel a:hover {
@@ -91,6 +88,24 @@ header a {
     font-weight: bold;
 }
 
+@media (max-width: 700px) {
+
+    .header-logo {
+        height: 50px;
+    }
+
+    header a {
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
 
 /* Main Section */
 
@@ -116,6 +131,18 @@ header a {
     color: #62466b;
 }
 
+@media (max-width: 700px) {
+
+    .home-intro-text h1 {
+        font-size: larger;
+    }
+
+    .home-intro-text h2 {
+        font-size: small;
+    }
+
+}
+
 .home-info-panel {
     margin: 0 15vw;
     align-self: stretch;
@@ -125,25 +152,12 @@ header a {
     justify-content: space-between;
 }
 
-@media (max-width:1024px) {
-    .home-info-panel {
-        display: flex;
-    }
-
-}
-
 .home-login-panel {
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: x-large;
     /* margin-right: 5vw; */
-}
-
-@media (max-width:1024px) {
-    .home-login-panel {
-        display: none;
-    }
 }
 
 .home-login-panel button {
@@ -175,9 +189,20 @@ header a {
     margin-left: 5vw;
 }
 
-@media (max-width: 1024px) {
+@media (max-width:1024px) {
+    .home-login-panel {
+        display: none;
+    }
+
+    .home-info-panel {
+        display: flex;
+    }
+}
+
+@media (max-width: 700px) {
     .right-info-panel {
-        margin: 0;
+        font-size: medium;
+        padding: 1rem;
     }
 }
 
@@ -194,18 +219,19 @@ header a {
 @media (max-width: 1440px) {
     .home-cards-panel {
         padding: 0 10vw;
-
     }
 }
-
 
 @media (max-width: 1024px) {
     .home-cards-panel {
         grid-template-columns: 1fr 1fr;
-        padding: 0 15vw;
+        padding: 0 10vw;
+    }
+
+    .right-info-panel {
+        margin: 0;
     }
 }
-
 
 .card-container {
     border: 1px solid black;
@@ -214,6 +240,17 @@ header a {
     min-width: 200px;
     overflow: hidden;
     margin: 1rem;
+}
+
+@media (max-width: 700px) {
+    .card-container {
+        height: 100px;
+    }
+
+    .home-cards-panel {
+        grid-template-columns: 1fr;
+        padding: 0 0;
+    }
 }
 
 .card-text {
@@ -274,6 +311,13 @@ nav {
     /* padding: 1rem; */
     font-size: small;
     /* padding-right: 1rem; */
+}
+
+@media (max-width: 700px) {
+    nav {
+        display: none;
+    }
+    
 }
 
 nav a {

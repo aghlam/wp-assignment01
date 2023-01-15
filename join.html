@@ -32,41 +32,70 @@
                     <li><a href="./healthy-habits.html"><h3>Healthy Habits</h3></a></li>
                 </ul>
             </nav>
+            <noscript>Please enable JavaScript for this page to function properly.</noscript>
             <div class="join-panel">
                 <h2>Join us to access the full range of services!</h2>
                 <form method="POST" action="./submitted.html" class="join-form" id="join-form">
-                    <label for="firstName">First name<input type="text" name="firstName" id="firstName" required></label>
-                    <label for="lastName">Last name<input type="text" name="lastName" id="lastName" required></label>
-                    <label for="email">Email<input type="email" name="email" id="email" required></label>
-                    <label for="emailConfirm">Confirm email<input type="email" name="emailConfirm" id="emailConfirm" required></label>
-                    <label for="phone">Phone<input type="tel" name="phone" id="phone" required></label>
-                    <label for="birthday">Birth Year
-                        <select name="birthday" id="birthday">
+                    <label for="firstName">First name
+                        <input type="text" name="firstName" id="firstName" placeholder="First name">
+                        <p id="firstName-error-capital" class="error-message">First name needs to start with capitalised</p>
+                        <p id="firstName-error-length" class="error-message">Cannot be more than 30 characters long</p>
+                    </label>
+                    <label for="lastName">Last name
+                        <input type="text" name="lastName" id="lastName" placeholder="Last name">
+                        <p id="lastName-error-length" class="error-message">Cannot be more than 30 characters long</p>
+                    </label>
+                    <label for="email">Email
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <p id="email-error" class="error-message">Please enter a valid email</p>
+                    </label>
+                    <label for="emailConfirm">Confirm email
+                        <input type="email" name="emailConfirm" id="emailConfirm" placeholder="Confirm email">
+                        <p id="email-confirm-error" class="error-message">Emails do not match</p>
+                    </label>
+                    <label for="phone">Phone
+                        <input type="tel" name="phone" id="phone" placeholder="Phone number">
+                        <p id="phone-error" class="error-message">Please enter a valid Australian number</p>
+                    </label>
+                    <label class="birthday-label" for="birthday">Birth Year
+                        <select name="birthday" id="birthday" class="birthday-select">
                             <option value="2023">2023</option>
                             <option value="2022">2022</option>
                             <option value="2021">2021</option>
                         </select>
                     </label>
-                    <div>
-                        <label for="studentStatus">Student status
-                            <input type="radio" id="studying" name="studentStatus" value="studying" checked>
-                            <label for="studying">Studying</label>
-                            <input type="radio" id="notStudying" name="studentStatus" value="not studying">
-                            <label for="notStudying">Studying</label>
+                    <div class="join-row-container">
+                        <label for="studentStatus"  class="grid-label">
+                            <div class="block-label">Student status</div>
+                            <div class="radio-option">
+                                <input type="radio" id="studying" name="studentStatus" value="studying" checked>
+                                <label for="studying">Studying</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="notStudying" name="studentStatus" value="not studying">
+                                <label for="notStudying">Not studying</label>
+                            </div>
                         </label>
                     </div>
-                    <div>
-                        <label for="employmentStatus">Employment Status
-                            <input type="radio" id="employed" name="employmentStatus" value="employed" checked>
-                            <label for="employed">Employed</label>
-                            <input type="radio" id="seeking" name="employmentStatus" value="seeking">
-                            <label for="seeking">Seeking Employment</label>
-                            <input type="radio" id="other" name="employmentStatus" value="other">
-                            <label for="other">Other</label>
+                    <div class="join-row-container">
+                        <label for="employmentStatus" class="grid-label">
+                            <div class="block-label">Employment Status</div>
+                            <div class="radio-option">
+                                <input type="radio" id="employed" name="employmentStatus" value="employed" checked>
+                                <label for="employed">Employed</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="seeking" name="employmentStatus" value="seeking">
+                                <label for="seeking">Seeking</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="other" name="employmentStatus" value="other">
+                                <label for="other">Other</label>
+                            </div>
                         </label>
-                        <label for="password">Password<input type="password" required></label>
                     </div>
-                    <button type="submit">Join!</button>
+                    <label for="password">Password<input type="password" placeholder="Password"></label>
+                    <button type="submit" class="join-button">Join!</button>
                 </form>
             </div>
         </main>

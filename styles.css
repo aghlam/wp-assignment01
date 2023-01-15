@@ -38,6 +38,20 @@ ul {
     padding: 0;
 }
 
+button {
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    font-size: large;
+    background-color: #62466b;
+    color: white;
+    border-radius: 1rem;
+}
+
+button:hover {
+    background-color: white;
+    color: #62466b;
+}
+
 button:active {
     transform: translateY(4px);
 }
@@ -124,6 +138,12 @@ header a {
     grid-template-columns: 1fr 5fr;
     padding: 0 15vw;
     background: linear-gradient(white, #E1F3F0);
+}
+
+@media (max-width: 800px) {
+    .main-general {
+        padding: 0 10vw;
+    }
 }
 
 @media (max-width: 700px) {
@@ -260,16 +280,10 @@ nav hr {
 
 .home-login-panel button {
     font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #62466b;
-    color: white;
-    border-radius: 1rem;
 }
 
-.home-login-panel button:hover {
-    background-color: white;
-    color: #62466b;
-}
+
+
 
 #span-separator {
     margin: 0 15px;
@@ -416,20 +430,6 @@ nav hr {
 
 }
 
-.contact-form button {
-    padding: 0.5rem 1rem;
-    font-family: inherit;
-    border-radius: 1rem;
-    font-size: large;
-    color: #62466b;
-    margin: 1rem;
-}
-
-.contact-form button:hover {
-    background-color: #62466b;
-    color: white;
-}
-
 .contact-form input, .contact-form textarea {
     font-family: inherit;
     font-size: large;
@@ -502,6 +502,107 @@ nav hr {
 
 .join-form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    grid-template-columns: [join-form-start] 1fr 1fr [join-form-end];
+    grid-template-rows: repeat(7 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 700px) {
+    .join-form {
+        grid-template-columns: [join-form-start] 1fr [join-form-end];
+    }
+}
+
+
+.join-form > label {
+    font-size: larger;
+    height: 7rem;
+}
+
+.join-form > label > input,
+.birthday-select {
+    display:block;
+    font-family: inherit;
+    font-size: large;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+    padding:20px;
+    min-width: 270px;
+    width: 20vw;
+    max-width: 500px;
+    background-color: #d5ede8;
+    border-radius: 8px;
+    border: solid 1px #62466b;
+    
+}
+
+@media (max-width: 800px) {
+    .join-form > label > input,
+    .birthday-select {
+        min-width: 210px;
+        width: 10vw;
+    }
+}
+
+.error-message {
+    color: red;
+    display: none;
+    margin: 0;
+    /* text-align: center; */
+    font-size: medium;
+}
+
+.join-row-container {
+    grid-column: join-form-start / join-form-end;
+    min-height: 90px;
+}
+
+.grid-label {
+    display: grid;
+    grid-template-columns: [label-start] 18vw 18vw 18vw [label-end]
+}
+
+@media (max-width: 700px) {
+    .grid-label {
+        grid-template-columns: [label-start] 1fr 1fr [label-end]
+    }
+
+    .error-message {
+        font-size: small;
+    }
+}
+
+.block-label {
+    grid-column: label-start / label-end;
+    margin-bottom: 0.5rem;
+    font-size: larger;
+}
+
+.radio-option {
+    /* all: none; */
+    display: flex;
+    justify-content: flex-start;
+    grid-column-start: span 1;
+    font-size: large;
+    margin: 8px;
+}
+
+.radio-option input {
+    margin-right: 1rem;
+}
+
+.join-button {
+    width: 8rem;
+    /* height: 10px; */
+    padding: 0.5rem;
+    text-align: center;
+    align-self: center;
+    grid-row-start: 7;
+    margin: 1rem 0;
+}
+
+@media (max-width: 700px) {
+    .join-button {
+        grid-row-start: auto;
+    }
 }

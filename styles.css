@@ -53,6 +53,10 @@ button:active {
     transform: translateY(4px);
 }
 
+a {
+    color: inherit;
+}
+
 /* --------------------------------------------- */
 /* General layout */
 

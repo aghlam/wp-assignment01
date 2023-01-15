@@ -1,4 +1,4 @@
-import { checkForCapital, checkEmpty, checkEmail, checkPhoneNumber, checkPassword } from "./utilities.mjs";
+import { checkForCapital, checkEmpty, checkEmail, checkPhoneNumber, checkPassword } from "./utilities.js";
 
 const joinForm = document.getElementById('join-form');
 
